@@ -2,63 +2,174 @@
 @import "base"
 
 
-.header
-	position: fixed
-	right: 0
-	left: 0
-	background-color: rgba(0, 0, 0, .5)
-	padding: 15px 0
-	transition: all .3s
-	z-index: 1001
 
-	&--active, &--menu
-		background-color: rgba(0, 0, 0, .8)
-		padding: 5px 0
+.cabinet
+
+	&--hero
+		background-image: linear-gradient(to right, #285aa2 0%, #f045d8 100%)
+		color: #fff
+
+		&__container
+			position: relative
+			padding-top: 65px
+			padding-bottom: 70px
+
+		&__logo
+			display: block
+			margin-bottom: 25px
+
+		&__decor
+			position: absolute
+			right: -70px
+			top: 0
+
+	&--nav
+
+		&__list
+			display: flex
+			justify-content: space-around
+			border-bottom: 2px solid #e6e6e6
+			padding: 25px 0
+			margin-bottom: 75px
+
+		.active
+			color: $accent
+
+			&::before
+				content: ''
+				position: absolute
+				bottom: -29px
+				left: 50%
+				transform: translate(-50%, 0)
+				width: 130px
+				height: 7px
+				border-radius: 3px
+				background: $accent
 
 
-	&__container
-		position: relative
-		display: flex
-		justify-content: space-between
-		align-items: center
+		a
+			position: relative
+			display: block
+			font-size: 18px
+			line-height: 1
+			text-transform: uppercase
+			font-weight: 600
+			color: $text
+			text-align: center
+
+			&:hover
+				color: $accent
+
+			span
+				display: block
+				margin-bottom: 20px
+
+			img
+				display: block
+				margin: 0 auto
+
+	&--courses
+		padding-bottom: 100px
+
+		&__item
+			display: flex
+			align-items: center
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+			border-radius: 3px
+			border: 2px solid #e6e6e6
+			padding: 20px 25px
+			margin-bottom: 25px
+
+			&:last-child
+				margin-bottom: 0
+
+			img
+				border-radius: 3px
+				background-color: #f045d8
+				width: 245px
+				height: 180px
+				margin-right: 10%
+
+			p
+				text-align: center
+				width: 60%
+
+	&--content
+		padding-bottom: 100px
+
+		&__iframe
+			margin-bottom: 35px
+
+		&__text
+			margin-bottom: 95px
+
+		&__arrow
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			a
+				text-transform: uppercase
+				position: relative
+				padding-right: 45px
+
+				&:hover
+					&::before
+						transform: translate(-10px, -50%)
+
+				&::before
+					content: url(../img/arrow.png)
+					position: absolute
+					right: 0
+					top: 50%
+					transform: translate(0, -50%)
+
+				&:last-child
+					padding-right: 0
+					padding-left: 45px
+					&:hover
+						&::before
+							transform: translate(10px, -60%) rotate(-180deg)
+
+					&::before
+						left: 0
+						right: auto
+						transform: translate(0, -60%) rotate(-180deg)
+
+
+
+
+		&__file
+			text-align: center
+
+			a
+				display: inline-block
+				line-height: 1
+				margin: 0 auto 15px
+				font-size: 14px
+				text-decoration: underline
+				text-transform: uppercase
 	
-.nav
-	ul
-		display: flex
-		justify-content: space-between
 
-	li
-		margin-right: 55px
-		&:last-child
-			margin-right: 0
+h2
+	color: $text
+	font-size: 18px
+	text-transform: uppercase
+	margin-bottom: 40px
+	text-align: center
+
+.pagination
+	color: $text
+	font-size: 18px
+	text-transform: uppercase
+	margin-bottom: 60px
+	font-weight: 700
+	display: flex
 
 	a
-		position: relative
-		z-index: 1
+		font-size: 18px
 		text-transform: uppercase
-
-		&::before
-			content: ''
-			width: 0
-			transform: scale(0)
-			transition: all .3s
-			position: absolute
-			bottom: 0
-			width: 100%
-			height: 1px
-			background-color: $accent
-			z-index: -1
-
-		&:hover,
-		&:focus
-			color: $accent
-			text-decoration: none
-			&::before
-				transform: scale(1)
-
-
-.footer
-	height: 1000px
+		margin: 0 10px
 
 
 @import "page"

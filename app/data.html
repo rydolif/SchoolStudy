@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Start</title>
+	<title>Data</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -76,25 +76,25 @@
 	<section class="cabinet--courses">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-10">
-					<div class="cabinet--courses__item">
-						<img src="img/cabinet--courses.jpg" alt="">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-					</div>
-					<div class="cabinet--courses__item">
-						<img src="img/cabinet--courses.jpg" alt="">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-					</div>
-					<div class="cabinet--courses__item">
-						<img src="img/cabinet--courses.jpg" alt="">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-					</div>
+				<div class="col-lg-5">
+					<h2>Вход</h2>
+					<form action="sendmail.php" class="form" method="post">
+						<input type="hidden" name="subject" value="Узнать подробнее!">
+						<div class="form__item">
+							<label for="">Email</label>
+							<input type="text" name="email" placeholder="Имя" required>
+						</div>
+						<div class="form__item">
+							<label for="">Пароль</label>
+							<input type="tel" name="phone" required placeholder="Телефон">
+						</div>
+						<div class="form__item--btn">
+							<a href="#">Забыли пароль?</a>
+						</div>
+						<div class="form__item--btn">
+							<button type="submit" class="btn footer__form_btn" name="submit">Вход</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

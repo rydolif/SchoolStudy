@@ -2,15 +2,12 @@
 
 
 //----------------------fonts---------------------
-$fonts: 'GothamPro', sans-serif
-$fw: 'Font Awesome 5 Brands', sans-serif
+$fonts: 'gilroy', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
-$accent: #000
-$text: #000
-$btn: #666
-$title: #333
+$accent: #f045d8
+$text: #664bb1
 
 //---------------------end-color---------------------
 
@@ -20,8 +17,8 @@ body
 	min-width: 320px
 	font-family: $fonts
 	font-size: 14px
-	color: $text
-	line-height: 1.75
+	color: #000
+	line-height: 1.4
 	font-weight: 400
 
 ::selection
@@ -38,9 +35,12 @@ section
 	
 h1, h2, h3, h4, h5, h6
 	font-weight: 700
-	line-height: 1.4
+	line-height: 1.2
 	margin: 0
 	padding: 0
+
+h1
+	font-size: 36px
 
 ul
 	margin: 0
@@ -53,29 +53,49 @@ i
 	color: #fff
 
 input, textarea
-	border: #808080 1px solid
+	border: none
 	border-radius: 0
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
-	
+	background-color: transparent
+	height: 100%
+	width: 100%
+	padding: 35px 35px 15px
+	font-size: 18px
+	color: #241c0e
+	position: absolute
+	right: 0
+	left: 0
+	bottom: 0
+	top: 0
+
 	&:focus:required:invalid
-		border-color: #808080
+		border-color: #fff
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:required:valid
-		border-color: #808080
+		border-color: #fff
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #808080
-		font-size: 12px
-		text-transform: uppercase
+		font-size: 18px
 		line-height: 1
+		color: #241c0e
+
+label
+	display: block
+	padding: 15px 35px
+	color: #62656a
+	font-size: 14px
+	line-height: 1
+	margin-bottom: 15px
+	font-weight: 500
+	z-index: 2
 
 b, strong
 	font-weight: 700
@@ -86,9 +106,17 @@ p
 
 a,
 a:focus,
-a:hover
+a:hover,
+a::before,
+a::after,
 	outline: none
 	text-decoration: none
+	transition: all .6s
+	color: $text
+
+a:focus,
+a:hover
+	color: $accent
 
 @import "_base/preloader"
 @import "_base/animation"
